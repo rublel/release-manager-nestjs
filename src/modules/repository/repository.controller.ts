@@ -41,8 +41,8 @@ export class RepositoryController {
     @Param('repository') repository: string,
     @Param('env') env: string,
   ) {
-    const { remoteUrl, repository: repo } =
-      await this.reposotoryService.getDevOpsRepo(repository);
+    // const { remoteUrl, repository: repo } =
+    //   await this.reposotoryService.getDevOpsRepo(repository);
     const release: any = await this.reposotoryService.getLastRelease(
       repository,
       env,
