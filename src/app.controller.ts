@@ -9,12 +9,16 @@ export class AppController {
     'diorstar-wechat-replication-functions',
     'diorstar-wechat-replication-functions-sfoa',
     'diorstar-wechat-logicapps',
-    'mp-js-wechat',
     'diorstar-wechat-apimanager',
     'diorstar-wechat-backend',
     'diorstar-wechat-azfunction',
     'diorstar-wechat-webapp',
     'algolia-middleware',
+    'mp-js-wechat',
+    'sch-diorstar-mpjs',
+    'sch-diorstar-backend',
+    'sch-diorstar-jobs',
+    'sch-diorstar-h5',
   ];
 
   @Get('/config')
