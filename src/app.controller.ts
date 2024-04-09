@@ -19,10 +19,12 @@ export class AppController {
 
   @Get('/config')
   getConfig() {
-    const envs = ['dev', 'uat', 'prod'];
+    const envs = ['sfoa', 'uat', 'prod'];
     const columns = [
+      'repo_manager',
       'repositryName',
       'version',
+      'description',
       'ref',
       'commit',
       'createdBy',
