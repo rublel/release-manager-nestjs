@@ -10,6 +10,3 @@ async function bootstrap() {
   Logger.verbose(`Server running on http://${ip.address()}:3001`, 'Bootstrap');
 }
 bootstrap();
-
-// const token = '3mwihut6jddo6bznjelybgjxxvwqosknfpoma4fo6uennalb37rqa';
-//
