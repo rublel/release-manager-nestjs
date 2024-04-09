@@ -48,7 +48,7 @@ export class RepositoryController {
       env,
     );
     if (!release) return { data: [] };
-    return { data: [{ remoteUrl, repository: repo, ...release }] };
+    return { data: [{ remoteUrl: '', ...release }] };
   }
 
   @Get('/:repository/ref/:ref')
