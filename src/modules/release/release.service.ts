@@ -33,7 +33,7 @@ export class ReleaseService {
           },
         },
         sort: [{ created_at: { order: 'desc' } }],
-        size: 1,
+        size: 10000,
       },
     });
   }
