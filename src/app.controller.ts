@@ -16,7 +16,7 @@ export class AppController {
     'algolia-middleware',
     'mp-js-wechat',
     'sch-diorstar-mpjs',
-    'sch-diorstar-backend',
+    'sch-wechat-backend',
     'sch-diorstar-jobs',
     'sch-diorstar-h5',
   ];
