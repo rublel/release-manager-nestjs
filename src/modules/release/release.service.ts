@@ -37,4 +37,24 @@ export class ReleaseService {
       },
     });
   }
+
+  getLastReleases(repository: string, envs = ['sfoa', 'uat', 'prod']) {
+    return this.elasticService.msearch({
+      body: envs.flatMap((env) => [
+        { index: 'releases' },
+        {
+          query: {
+            bool: {
+              filter: [
+                { term: { 'repository.keyword': repository } },
+                { term: { 'env.keyword': env } },
+              ],
+            },
+          },
+          sort: [{ created_at: { order: 'desc' } }],
+          size: 1,
+        },
+      ]),
+    });
+  }
 }

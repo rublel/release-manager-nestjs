@@ -70,4 +70,9 @@ export class RepositoryService {
     const response = await this.releaseService.getLastRelease(repository, env);
     return response.hits.hits[0]?._source;
   }
+
+  async getDevOpsReleases(repository: string) {
+    const response = await this.releaseService.getLastReleases(repository);
+    return response.responses.map((res: any) => res.hits.hits[0]?._source);
+  }
 }

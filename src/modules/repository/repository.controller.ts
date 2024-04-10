@@ -25,16 +25,21 @@ export class RepositoryController {
     return await this.reposotoryService.getDevOpsRepos();
   }
 
+  @Get('/:repository')
+  async getAzDevopsRepo(@Param('repository') repository: string) {
+    return await this.reposotoryService.getDevOpsReleases(repository);
+  }
+
   @Get('/env/:env')
   async getAzDevopsReposByEnv(@Param('env') env: string) {
     const promises = this.respositories.map(async (repo) => {
-      const { remoteUrl, repository } =
-        await this.reposotoryService.getDevOpsRepo(repo);
+      //   const { remoteUrl, repository } =
+      //     await this.reposotoryService.getDevOpsRepo(repo);
       const release: any = await this.reposotoryService.getLastRelease(
         repo,
         env,
       );
-      return { remoteUrl, repository, ...release };
+      return { remoteUrl: '', ...release };
     });
     const data = await Promise.all(promises);
     return { data };
