@@ -27,6 +27,7 @@ export class AppController {
     const columns = [
       'repo_manager',
       'repositryName',
+      'tag',
       'version',
       'description',
       'ref',
