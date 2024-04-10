@@ -67,7 +67,7 @@ export class RepositoryService {
   }
 
   async getLastRelease(repository: string, env: string) {
-    const response = await this.releaseService.getLastRelease(repository, env);
+    const response = await this.releaseService.geReleases(repository, env);
     return response.hits.hits[0]?._source;
   }
 

@@ -20,7 +20,7 @@ export class ReleaseService {
     });
   }
 
-  getLastRelease(repository: string, env: string) {
+  geReleases(repository: string, env: string) {
     return this.elasticService.search({
       index: 'releases',
       body: {
